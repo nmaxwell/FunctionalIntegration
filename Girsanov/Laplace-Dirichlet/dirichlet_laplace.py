@@ -64,7 +64,7 @@ def solution( x=(0.,0.) , f=lambda x:l2norm(x), n_samples = 100, dt=0.1, drift=l
     results = []
     for k in range(n_samples):
         t1 = clock()
-        fX, M_T = hitting_value( x,f,dt,drift,region)
+        fX, M_T = hitting_value(x, f, dt, drift, region)
         t2 = clock()
         print t2-t1
         results.append(fX*M_T)
