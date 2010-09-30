@@ -75,49 +75,50 @@
 Considering
 
 $$
-\Del^2 U + k^2 U = 0, \; k = \frac{\om}{c}, 
+\Del^2 U(x) + (k \kappa(x))^2 U(x) = \Upsilon(x, \omega), \; k = \frac{\om}{c_0} \in \reals, x \in \reals^n, 
 $$
 
 then substitute $U(x) = u(x) e^{i k S(x) }$,
 
-$$
-\Del \cdot \Del \left(  u(x) e^{i k S(x)} \right) + k^2 \left(  u(x) e^{i k S(x)} \right) = 0
-$$
+%$$
+%\Del \cdot \Del \left(  u(x) e^{i k S(x)} \right) + k^2 \left(  u(x) e^{i k S(x)} \right) = 0
+%$$
 
 $$
-\Del \cdot \Del (f g) = \Del \cdot \left( f \Del g   +  g \Del f \right) = (\Del f ) ( \Del g ) + f \Del^2 g + (\Del g) ( \Del f ) + g \Del^2 f =  f \Del^2 g + 2 (\Del g) ( \Del f ) + g \Del^2 f
-$$
-
-
-$$
-\Del ( e^{i k S(x) } ) = i k e^{i k S(x)} \Del S(x) , \;  \Del^2( e^{i k S(x) }  ) =  (i k)^2  e^{i k S(x)}  (\Del S(x))^2  + i k e^{i k S(x)} \Del^2 S(x)
+\Del \cdot \Del (f g) = \Del \cdot \left( f \Del g   +  g \Del f \right) = (\Del f ) \cdot ( \Del g ) + f \Del^2 g + (\Del g) \cdot ( \Del f ) + g \Del^2 f =  f \Del^2 g + 2 (\Del g) \cdot ( \Del f ) + g \Del^2 f
 $$
 
 
 $$
-\Del ^2 \left(  u(x) e^{i k S(x)} \right) + k^2   u(x) e^{i k S(x)}  = 
-u(x) \Del^2  e^{i k S(x)} + 2 (\Del u) ( \Del  e^{i k S(x)} ) +  e^{i k S(x)} \Del^2 u  +  k^2 u(x) e^{i k S(x)}
+\Del ( e^{i k S(x) } ) = i k e^{i k S(x)} \Del S(x) , \;  \Del^2( e^{i k S(x) }  ) =  (i k)^2  e^{i k S(x)}  |\Del S|^2  + i k e^{i k S(x)} \Del^2 S(x)
 $$
 
 
 $$
-=  (i k)^2 u e^{i k S}  ( \Del S)^2  + i k u e^{i k S} \Del^2 S + 2 i k e^{i k S}  \Del u \Del S  +  e^{i k S} \Del^2 u  + k^2 u  e^{i k S}  
+\Del ^2 \left(  u(x) e^{i k S(x)} \right) + k^2 \kappa^2(x)   u(x) e^{i k S(x)}  = 
+u(x) \Del^2  e^{i k S(x)} + 2 \Del u \cdot \Del  e^{i k S(x)}  +  e^{i k S(x)} \Del^2 u  +  k^2 \kappa^2(x)  u(x) e^{i k S(x)}
+$$
+
+
+$$
+=  (i k)^2 u e^{i k S}  |\Del S|^2  + i k u e^{i k S} \Del^2 S + 2 i k e^{i k S}  \Del u \cdot  \Del S  +  e^{i k S} \Del^2 u  + k^2  \kappa^2 u  e^{i k S}  
 $$
 
 then mupltiply by $ \frac{1}{2} e^{ - i k S} $ 
 
 $$
-=   \frac{1}{2}  \Del^2 u  + i k   \Del u \Del S  + \frac{1}{2}  k^2 u  +  \frac{1}{2} (i k)^2 u  (\Del S)^2  + \frac{1}{2} i k u  \Del^2 S 
+\frac{1}{2} e^{-i k S} \, \Upsilon =   \frac{1}{2}  \Del^2 u  + i k   \Del u \cdot \Del S  + \frac{1}{2}  k^2 \kappa^2 u  +  \frac{1}{2} (i k)^2 u  | \Del S |^2  + \frac{1}{2} i k u  \Del^2 S 
 $$
 
 $$
-=   \frac{1}{2}  \Del^2 u  + i k   \Del u \Del S  + \frac{ik}{2} \left( -ik  +  (ik) ( \Del S)^2  +   \Del^2 S \right) u
+=   \frac{1}{2}  \Del^2 u  + i k   \Del u \cdot \Del S  + \frac{ik}{2} \left( -ik \kappa^2  +  ik | \Del S |^2  +   \Del^2 S \right) u
 $$
 
-intruduce the constraint $(\Del S)^2 = k^2$, 
+intruduce the constraint $| \Del S(x) |^2 = \kappa(x)^2$, and define $F(x, \omega) = \frac{1}{2} e^{-i k S(x)} \, \Upsilon(x, \omega) $
+
 
 $$
-\Del^2 U + k^2 U = 0 \rarw  \frac{1}{2}  \Del^2 u  + i k   \Del u \Del S  + \frac{ik}{2} \left( -ik  +  (ik) ( \Del S)^2  +   \Del^2 S \right) u = 0
+F =   \frac{1}{2}  \Del^2 u  + i k   \Del u \cdot  \Del S  + \frac{ik}{2} u \Del^2 S
 $$
 
 
